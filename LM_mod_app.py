@@ -21,7 +21,7 @@ def _read_csv(filename):
     """
     if "pyodide" in sys.modules:                       # we are in WASM
         from pyodide.http import open_url
-        return pd.read_csv(open_url(f"/processed_data/{filename}"))
+        return pd.read_csv(open_url(f"processed_data/{filename}"))
     else:                                              # normal Python
         return pd.read_csv(Path(__file__).parent /
                             "processed_data" / filename)

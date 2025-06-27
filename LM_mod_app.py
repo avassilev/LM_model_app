@@ -262,7 +262,7 @@ controls = pn.Column(
     calculate_button,
 )
 
-layout = pn.Column(
+layout = pn.Column(pn.pane.Markdown("# Приложение за оценка на макроикономическите ефекти от демографската динамика"),
     controls,
     pn.pane.Markdown("### Резултати"),
     table_output,

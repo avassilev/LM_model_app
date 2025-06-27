@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 
 sys.path.append('.')
 
+
+
 # ---------- 1. Helper that works in BOTH environments -------------
 def _read_csv(filename):
     """
@@ -265,7 +267,15 @@ layout = pn.Column(
     pn.pane.Markdown("### Резултати"),
     table_output,
     pn.pane.Markdown("### Фактори за икономическия растеж"),
-    plot_output
+    plot_output,
+    pn.pane.HTML(
+        '<a href="documentation/index.html" target="_blank">Документация (HTML)</a>',
+        sizing_mode="stretch_width"
+    ),
+    pn.pane.HTML(
+        '<a href="documentation/LM_app_doc.pdf" target="_blank">Документация (PDF)</a>',
+        sizing_mode="stretch_width"
+    )
 )
 
 # layout.servable()
